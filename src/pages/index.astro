@@ -1,12 +1,168 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import Layout from '../layouts/Layout.astro';
+import Banner from '../components/Banner.astro';
+import CarouselOfProjects from '../components/CarouselOfProjects.astro';
+import BlogSection from '../components/BlogSection.astro';
+import Counter from '../components/Counter.jsx';
+
+import LogoImpulsaProyectosInmobiliarios from '../assets/Logo_Impulsa_Proyectos_Inmobiliarios.png'
+import LogoAlianza from '../assets/Logo_Alianza.png'
+import LogoBancodeBogota from '../assets/Logo_Banco_de_Bogota.png'
+import LogoScotiabank from '../assets/Logo_Scotiabank.png'
+import LogoCredicorp from '../assets/Logo_Credicorp.svg'
+
+// Supports weights 100-900
+import '@fontsource-variable/inter';
 
 ---
 
 <Layout title="Impulsa Colombia | Proyectos Inmobiliarios">
-	<main>
-		
+	<Navigation />
+	<main class=" bg-shark-900">
+		<!--<Banner />-->
+		<section class="max-w-7xl mx-auto pt-32 px-4 xl:px-6">
+			<div class="flex flex-col justify-around items-center">
+			  <div class="flex flex-col justify-center items-start w-full">
+				<h1 class="text-4xl md:text-6xl font-bold text-white text-center w-full md:pt-10">
+				  IMPULSA EN EL MUNDO
+				</h1>
+				<p class="text-shark-300 text-base md:text-xl font-normal w-full py-5 text-center">
+				  Impulsa Colombia forma parte de un grupo Internacional de empresas
+				  conformado por un equipo de profesionales que dan vida a la
+				  filosofía de la compañía: Máxima Calidad, Profesionalidad,
+				  Servicio impecable al cliente y riguroso cumplimiento de los
+				  plazos en todas las áreas de trabajo donde participamos.
+				</p>
+				<p class="text-shark-200 text-xl md:text-2xl font-normal w-full py-5 text-center">
+				  ¡Esa es nuestra fórmula del éxito!
+				</p>
+				<div class="w-full grid grid-cols-3 gap-6 justify-center items-center mt-10">
+				  <div class="col-span-3 md:col-span-1">
+					<h2 class="text-2xl md:4xl font-semibold text-white pb-3 text-center">
+					  Viviendas entregadas en el mundo
+					</h2>
+					<p class="text-xl md:text-3xl font-bold text-center text-amber-400 pb-2">
+					  Más de 18 mil viviendas
+					</p>
+				  </div>
+				  <div class="col-span-3 md:col-span-1">
+					<h2 class="text-2xl md:4xl font-semibold text-white pb-3 text-center">
+					  Viviendas entregadas en España
+					</h2>
+					<Counter client:load end={17610} />
+				  </div>
+				  <div class="col-span-3 md:col-span-1">
+					<h2 class="text-2xl md:4xl font-semibold text-white pb-3 text-center">
+					  Viviendas entregadas en Colombia
+					</h2>
+					<Counter client:load end={866} />
+				  </div>
+				</div>
+			  </div>
+			  {/* 
+						<div class='flex justify-center items-center col-span-1 md:col-span-2'>
+							<div class=' bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-gray-100 rounded-t-full rounded-b-[73rem] h-[400px] md:h-[800px] object-cover'>
+								<img src={Referencia} loading="lazy" class='p-5 rounded-t-full rounded-b-[73rem] h-full object-cover'></img>
+							</div>
+						</div>
+						*/}
+			</div>
+			<div class="mt-12 grid grid-cols-3 sm:grid-cols-5 bg-white rounded-t-md bor py-12">
+			  <div class="col-span-5 lg:col-span-1 p-4 grayscale transition duration-200 hover:grayscale-0">
+				<a href="https://impulsaproyectos.com/" target="_blank">
+				  <img
+					src={LogoImpulsaProyectosInmobiliarios.src}
+					class="h-12 w-auto mx-auto"
+					loading="lazy"
+					alt="Logo Impulsa Proyectos Inmobiliarios"
+					width=""
+					height=""
+				  />
+				</a>
+			  </div>
+			  <div class="col-span-5 lg:col-span-1 p-4 grayscale transition duration-200 hover:grayscale-0">
+				<a href="https://www.alianza.com.co/" target="_blank">
+				  <img
+					src={LogoAlianza.src}
+					class="h-12 w-auto mx-auto"
+					loading="lazy"
+					alt="Logo Alianza Fiduciaria"
+					width=""
+					height=""
+				  />
+				</a>
+			  </div>
+			  <div class="col-span-5 lg:col-span-1 p-4 grayscale transition duration-200 hover:grayscale-0">
+				<a href="https://www.bancodebogota.com/" target="_blank">
+				  <img
+					src={LogoBancodeBogota.src}
+					class="h-12 w-auto mx-auto"
+					loading="lazy"
+					alt="Logo Banco de Bogotá"
+					width=""
+					height=""
+				  />
+				</a>
+			  </div>
+			  <div class="col-span-5 lg:col-span-1 p-4 grayscale transition duration-200 hover:grayscale-0">
+				<a href="https://www.scotiabank.com/" target="_blank">
+				  <img
+					src={LogoScotiabank.src}
+					class="h-12 w-auto m-auto"
+					loading="lazy"
+					alt="Logo Scotiabak Colpatria"
+					width=""
+					height=""
+				  />
+				</a>
+			  </div>
+			  <div class="col-span-5 lg:col-span-1 p-4 grayscale transition duration-200 hover:grayscale-0">
+				<a
+				  href="https://www.credicorpcapital.com/Colombia/Paginas/NHome.aspx"
+				  target="_blank"
+				>
+				  <img
+					src={LogoCredicorp.src}
+					class="h-12 w-60 lg:w-auto mx-auto"
+					loading="lazy"
+					alt="Logo Credicorp Fiduciaria"
+					width=""
+					height=""
+				  />
+				</a>
+			  </div>
+			</div>
+		  </div>
+		</section>
+		<section class="pt-28 pb-12 bg-white">
+			<div id="projects" class="max-w-7xl mx-auto px-4 xl:px-6">
+				<div class="flex flex-col">
+				  <p class=" text-xl md:text-2xl font-bold text-amber-600">
+					Nuestros{" "}
+				  </p>
+				  <h1 class="text-4xl md:text-5xl font-bold text-shark-900 -mt-2 -ml-0.5 mb-12">
+					Proyectos
+				  </h1>
+				</div>
+				<CarouselOfProjects />
+			  </div>
+		</section>
+		<section id="blog" class="max-w-7xl mx-auto px-4 xl:px-6 py-12">
+			<p class=" text-xl md:text-2xl font-bold text-amber-600">
+			  Sala de{" "}
+			</p>
+			<h1 class="text-4xl md:text-5xl font-bold text-white -mt-2 -ml-0.5 mb-12">
+			  Prensa
+			</h1>
+			<BlogSection />
+		  </section>
 	</main>
 </Layout>
 
+<style>
+	body {
+  font-family: 'Inter Variable', sans-serif;
+}
+</style>
 

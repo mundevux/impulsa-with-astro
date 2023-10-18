@@ -1,0 +1,51 @@
+---
+import CardOfProjects from "./CardOfProjects.astro";
+import dataProjects from "../dataProjects.js";
+---
+
+<div class="max-w-screen-xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <CardOfProjects 
+            image={dataProjects[0].fachada}
+            logo={dataProjects[0].logo} 
+            title={dataProjects[0].name}
+            text={dataProjects[0].text}
+            link={dataProjects[0].link} 
+             />
+             <CardOfProjects 
+            image={dataProjects[1].fachada}
+            logo={dataProjects[1].logo} 
+            title={dataProjects[1].name}
+            text={dataProjects[1].text}
+            link={dataProjects[1].link} 
+             />
+             <CardOfProjects 
+            image={dataProjects[2].fachada}
+            logo={dataProjects[2].logo} 
+            title={dataProjects[2].name}
+            text={dataProjects[2].text}
+            link={dataProjects[2].link} 
+             />
+             <CardOfProjects 
+            image={dataProjects[3].fachada}
+            logo={dataProjects[3].logo} 
+            title={dataProjects[3].name}
+            text={dataProjects[3].text}
+            link={dataProjects[3].link} 
+             />
+             <CardOfProjects 
+            image={dataProjects[4].fachada}
+            logo={dataProjects[4].logo} 
+            title={dataProjects[4].name}
+            text={dataProjects[4].text}
+            link={dataProjects[4].link} 
+             />
+             <CardOfProjects 
+            image={dataProjects[5].fachada}
+            logo={dataProjects[5].logo} 
+            title={dataProjects[5].name}
+            text={dataProjects[5].text}
+            link={dataProjects[5].link} 
+             />
+    </div>
+</div>

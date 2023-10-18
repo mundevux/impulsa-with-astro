@@ -1,0 +1,38 @@
+---
+interface Props{
+    image: string;
+    logo: string;
+    title: string;
+    text: string;
+    link: string;
+}
+
+const { image, logo, title, text, link} = Astro.props
+
+---
+
+<div class="bg-white rounded-lg overflow-hidden shadow-md">
+    <img class="w-full h-64 object-cover" src={image} alt={title} />
+    <div class="p-4">
+      <div class="flex items-center justify-start">
+        <img
+          class="w-12 h-12 rounded-full object-cover border-[1px] border-shark-600 shadow shadow-shark-500/40"
+          src={logo}
+          alt={title}
+        />
+        <a
+          href={link}
+          class=" text-lg sm:text-xl font-bold ml-2 hover:text-amber-500 cursor-pointer"
+        >
+          {title}
+        </a>
+      </div>
+      <p class="text-shark-900 text-base">{text}</p>
+      <a
+        href={link}
+        class="inline-block mt-4 bg-amber-400 hover:bg-amber-500 transition text-white text-sm md:text-base font-bold rounded-lg p-2"
+      >
+        Me interesa
+      </a>
+    </div>
+  </div>
