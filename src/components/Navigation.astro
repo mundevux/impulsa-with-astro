@@ -1,5 +1,6 @@
 ---
 import logoImpulsa from '../assets/Logo_Impulsa_Colombia.png'
+import ContactModal from './ContactModal.astro';
 ---
 <header>
     <nav class=" z-20 fixed w-screen bg-shark-900 backdrop-blur-2xl">
@@ -92,8 +93,8 @@ import logoImpulsa from '../assets/Logo_Impulsa_Colombia.png'
             </div>
 
             <div class="flex justify-center mt-8 lg:mt-0">
-              <button class="bg-amber-500 hover:bg-amber-600 transition text-white text-base font-bold rounded-lg p-2">
-                <a href="#contact">Contacto</a>
+              <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="bg-amber-500 hover:bg-amber-600 transition text-white text-base font-bold rounded-lg p-2">
+                Contacto
               </button>
             </div>
           </div>

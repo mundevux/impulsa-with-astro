@@ -10,9 +10,36 @@ import LogoAlianza from '../assets/Logo_Alianza.png'
 import LogoBancodeBogota from '../assets/Logo_Banco_de_Bogota.png'
 import LogoScotiabank from '../assets/Logo_Scotiabank.png'
 import LogoCredicorp from '../assets/Logo_Credicorp.svg'
+import iconWaze from "../assets/iconWaze.png";
+import iconMaps from "../assets/iconMaps.png";
 
 // Supports weights 100-900
 import '@fontsource-variable/inter';
+import ContactForm from '../components/ContactForm';
+import Ubication from '../components/Ubication.astro';
+
+const oficinaPrincipal = {
+    nameUbication: "Oficina Principal",
+    linkDirection: "https://goo.gl/maps/Txs3cUnbB4SzWqb58",
+    direction: "Calle 98 # 22 - 64 Oficina 701",
+    city: "Bogotá, Colombia",
+    refPhone: "tel:+576017942134",
+    phone: "(601) 794 2134",
+    textWhatsapp: "WhatsApp: ",
+    refWhatsApp: "https://wa.me/573176676375",
+    whatsapp: "(317) 667 6375",
+    textEmail: "Email: ",
+    refEmail: "mailto:info@impulsacolombia.com.co",
+    email: "info@impulsacolombia.com.co",
+    imageWaze: iconWaze.src,
+    refWaze:
+      "https://www.waze.com/en/live-map/directions/co/bogota/cl.-98-8-37?place=ChIJDXldaZqaP44RJNHVPhzOm4w",
+    textWaze: "Llega con Waze",
+    imageMaps: iconMaps.src,
+    refMaps: "https://goo.gl/maps/h9A4sjJeCFWT8QP79",
+    textMaps: "Llega con Maps",
+    iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.520035040723!2d-74.0428268846926!3d4.679286043144424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a9a695d790d%3A0x8c9bce1c3ed5d124!2sCl.%2098%20%238-37%2C%20Localidad%20de%20Chapinero%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1680636132338!5m2!1ses!2sco",
+  };
 
 ---
 
@@ -155,7 +182,41 @@ import '@fontsource-variable/inter';
 			  Prensa
 			</h1>
 			<BlogSection />
-		  </section>
+		</section>
+		<section class="bg-white">
+			<div class="max-w-7xl mx-auto px-4 xl:px-6 py-12">
+				<p class=" text-xl md:text-2xl font-bold text-amber-600">
+					Ubicanos{" "}
+				</p>
+				<h1 class="text-4xl md:text-5xl font-bold text-shark-900 -mt-2 -ml-0.5 mb-12">
+					¡Estamos para ayudarte!
+				</h1>
+				<div class="flex justify-between items-center">
+					<Ubication 
+						nameUbication={oficinaPrincipal.nameUbication},
+						linkDirection={oficinaPrincipal.linkDirection},
+						direction={oficinaPrincipal.direction},
+						city={oficinaPrincipal.city},
+						refPhone={oficinaPrincipal.refPhone},
+						phone={oficinaPrincipal.phone},
+						textWhatsapp={oficinaPrincipal.textWhatsapp},
+						refWhatsApp={oficinaPrincipal.refWhatsApp},
+						whatsapp={oficinaPrincipal.whatsapp},
+						textEmail={oficinaPrincipal.textEmail},
+						refEmail={oficinaPrincipal.refEmail},
+						email={oficinaPrincipal.email},
+						iconWaze={oficinaPrincipal.imageWaze},
+						wazeLink={oficinaPrincipal.refWaze},
+						textWaze={oficinaPrincipal.textWaze},
+						iconMaps={oficinaPrincipal.imageMaps},
+						mapsLink={oficinaPrincipal.refMaps},
+						textMaps={oficinaPrincipal.textMaps},
+						iframe={oficinaPrincipal.iframe}
+					/>
+				</div>
+			</div>
+		</section>
+		<ContactForm client:load/>
 	</main>
 </Layout>
 
