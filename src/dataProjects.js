@@ -1,3 +1,16 @@
+import logoMonteblanco from "./assets/Cerasus_Monteblanco/Logo_Cerasus_Monteblanco.png";
+import fachadaMonteblanco from "./assets/Cerasus_Monteblanco/Fachada_Cerasus_Monteblanco.jpg";
+import logoDanubio from "./assets/Cerasus_Danubio/Logo_Cerasus_Danubio.png";
+import fachadaDanubio from "./assets/Cerasus_Danubio/Fachada_Cerasus_Danubio.png";
+import logoUsme from "./assets/Cerasus_Usme/Logo_Cerasus_Usme.png";
+import fachadaUsme from "./assets/Cerasus_Usme/Fachada_Cerasus_Usme.jpg";
+import logoTunja from "./assets/Avium_Tunja/Logo_Avium_Tunja.png";
+import fachadaTunja from "./assets/Avium_Tunja/Fachada_Avium_Tunja.jpg";
+import logoCerasusSextaEntrada from "./assets/Cerasus_Sexta_Entrada/Logo_Cerasus_Sexta_Entrada.png";
+import fachadaCerasusSextaEntrada from "./assets/Cerasus_Sexta_Entrada/Fachada_Cerasus_Sexta_Entrada.png";
+import logoPrunusSextaEntrada from "./assets/Prunus_Sexta_Entrada/Logo_Prunus_Sexta_Entrada.png";
+import fachadaPrunusSextaEntrada from "./assets/Prunus_Sexta_Entrada/Fachada_Prunus_Sexta_Entrada.png";
+
 const projects = [
   {
     id: 1,
@@ -8,8 +21,8 @@ const projects = [
     type: "vis",
     text: "Un nuevo Proyecto de Vivienda de Interés Social en Bogotá, un proyecto VIS A OTRO NIVEL.",
     descriptionType: "Vivienda de interés social",
-    logo: "./src/assets/Cerasus_Monteblanco/Logo_Cerasus_Monteblanco.png",
-    fachada: "./src/assets/Cerasus_Monteblanco/Fachada_Cerasus_Monteblanco.jpg",
+    logo: logoMonteblanco.src,
+    fachada: fachadaMonteblanco.src,
     fachadaAlt: "Fachada Cerasus Monteblanco",
     logoAlt: "Logo Cerasus Monteblanco",
     link: "/projects/cerasus-monteblanco",
@@ -46,8 +59,8 @@ const projects = [
     type: "vis",
     text: "Un nuevo concepto de construcción enfocado en dirigir el proyecto hacia un factor humano mas que monetario.",
     descriptionType: "Vivienda de interés social",
-    logo: "./src/assets/Cerasus_Danubio/Logo_Cerasus_Danubio.png",
-    fachada: "./src/assets/Cerasus_Danubio/Fachada_Cerasus_Danubio.png",
+    logo: logoDanubio.src,
+    fachada: fachadaDanubio.src,
     fachadaAlt: "Fachada Cerasus Danubio",
     logoAlt: "Logo Cerasus Danubio",
     link: "/projects/cerasus-danubio",
@@ -88,8 +101,8 @@ const projects = [
     type: "vip",
     text: "Unn proyecto de vivienda VIP (interés prioritario) construido en la Calle 110 A Sur No 3 A- 40 en la Localidad de Usme.",
     descriptionType: "Vivienda de interés prioritario",
-    logo: "./src/assets/Cerasus_Usme/Logo_Cerasus_Usme.png",
-    fachada: "./src/assets/Cerasus_Usme/Fachada_Cerasus_Usme.jpg",
+    logo: logoUsme.src,
+    fachada: fachadaUsme.src,
     fachadaAlt: "Fachada Cerasus Usme",
     logoAlt: "Logo Cerasus Usme",
     link: "/projects/cerasus-usme",
@@ -122,8 +135,8 @@ const projects = [
     type: "no vis",
     text: "Es proyecto de vivienda de estrato 3 constrido en la calle 18 No. 1-140 del sector del Rodeo en la ciudad de Tunja.",
     descriptionType: "Vivienda no VIS",
-    logo: "./src/assets/Avium_Tunja/Logo_Avium_Tunja.png",
-    fachada: "./src/assets/Avium_Tunja/Fachada_Avium_Tunja.jpg",
+    logo: logoTunja.src,
+    fachada: fachadaTunja.src,
     fachadaAlt: "Fachada Avium Tunja",
     logoAlt: "Logo Avium Tunja",
     link: "/projects/avium-tunja",
@@ -160,9 +173,8 @@ const projects = [
     type: "vip",
     text: "Un nuevo Proyecto de Vivienda de Interés Prioritario en Barranquilla.",
     descriptionType: "Vivienda de interés prioritario",
-    logo: "./src/assets/Cerasus_Sexta_Entrada/Logo_Cerasus_Sexta_Entrada.png",
-    fachada:
-      "./src/assets/Cerasus_Sexta_Entrada/Fachada_Cerasus_Sexta_Entrada.png",
+    logo: logoCerasusSextaEntrada.src,
+    fachada: fachadaCerasusSextaEntrada.src,
     fachadaAlt: "Fachada Cerasus Sexta Entrada",
     logoAlt: "Logo Cerasus Sexta Entrada",
     link: "/projects/cerasus-sexta-entrada",
@@ -195,9 +207,8 @@ const projects = [
     type: "vis",
     text: "Un nuevo Proyecto de Vivienda de Interés Social en Barranquilla.",
     descriptionType: "Vivienda de interés social",
-    logo: "./src/assets/Prunus_Sexta_Entrada/Logo_Prunus_Sexta_Entrada.png",
-    fachada:
-      "./src/assets/Prunus_Sexta_Entrada/Fachada_Prunus_Sexta_Entrada.png",
+    logo: logoPrunusSextaEntrada.src,
+    fachada: fachadaPrunusSextaEntrada.src,
     fachadaAlt: "Fachada Prunus Sexta Entrada",
     logoAlt: "Logo Prunus Sexta Entrada",
     link: "/projects/prunus-sexta-entrada",
