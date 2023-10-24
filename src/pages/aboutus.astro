@@ -1,0 +1,124 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Counter from "../components/Counter";
+import construccionAvium from "../assets/Construccion_Avium_Tunja.jpg";
+import imagenProyectos from "../assets/proyectos-entregados.png";
+import imagenEntregadas from "../assets/viviendas-entregadas.png";
+import imagenEnConstruccion from "../assets/viviendas-a-entregar.png";
+
+// Supports weights 100-900
+import '@fontsource-variable/inter';
+
+---
+
+<Layout title="Nosotros">
+    <div class="max-w-7xl mx-auto pt-32 px-4 xl:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6">
+        <div class="col-span-2 md:col-span-1">
+          <p class=" text-lg md:text-xl font-bold text-amber-600">
+            Sobre{" "}
+          </p>
+          <h1 class="text-4xl md:text-5xl font-bold text-shark-900 -mt-2 -ml-0.5 mb-12">
+            Nosotros
+          </h1>
+          <p class="text-base md:text-lg font-medium text-shark-900 pb-4 text-justify">
+            Somos una promotora inmobiliaria Colombia con más de 10 años de
+            experiencia en el mercado. Contamos con el respaldo{" "}
+            <a
+              href="http://impulsaproyectos.com/"
+              target="_blank"
+              class="text-base md:text-lg font-bold text-amber-500 "
+            >
+              Impulsa Proyectos Inmobiliarios
+            </a>
+            . Nos especializamos en la construcción de viviendas de alta
+            calidad y en la satisfacción de las necesidades de nuestros
+            clientes.
+          </p>
+          <p class="text-base md:text-lg font-medium text-shark-900 pb-4 text-justify">
+            Nos esforzamos por ser originales e innovadores, y siempre
+            buscamos nuevas formas de mejorar nuestros servicios. Nuestro
+            objetivo es ofrecer a nuestros clientes una experiencia única y
+            satisfactoria en la compra de su hogar.
+          </p>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <img
+            src={construccionAvium.src}
+            alt="About Us"
+            loading="lazy"
+            class="w-full h-full object-cover rounded-md shadow-md"
+          />
+        </div>
+      </div>
+      <p class="text-base md:text-lg font-medium text-shark-900 pb-4 text-justify">
+        En nuestra empresa, valoramos la honestidad, la transparencia y la
+        calidad en todo lo que hacemos. Nos esforzamos por mantener una
+        comunicación abierta y honesta con nuestros clientes, y siempre
+        estamos dispuestos a escuchar sus necesidades y sugerencias.
+      </p>
+      <p class="text-base md:text-lg font-medium text-shark-900 pb-4 text-justify">
+        Nuestro equipo está formado por expertos en el campo de la
+        construcción y la inmobiliaria, y trabajamos juntos para ofrecer a
+        nuestros clientes los mejores resultados. Nos enorgullece nuestro
+        trabajo y estamos comprometidos con la excelencia en todo lo que
+        hacemos.
+      </p>
+      <p class="text-base md:text-lg font-medium text-shark-900 pb-4 text-justify">
+        Todo esto no sería posible sin la solidez que proporciona la
+        experticia, otorgada por años de trabajo; esto nos permite adaptarnos
+        a los nuevos contextos y sobre todo a las necesidades del sector. La
+        entrega de más de 16.000 viviendas avala nuestra compañía y nos otorga
+        suficiente crédito para continuar desarrollando una labor con sentido.
+      </p>
+      <div class="md:flex justify-around items-center mt-16 pb-6">
+        <div class="flex flex-col justify-center items-center col-span-2 md:col-span-1">
+          <img
+            src={imagenProyectos.src}
+            alt="Proyectos Entregados"
+            loading="lazy"
+            width="128px"
+            class=" object-fill rounded-md"
+          />
+          <Counter client:load end={16} />
+          <p class="text-xl md:text-2xl font-bold text-shark-800 pb-4">
+            Proyectos Entregados
+          </p>
+        </div>
+        <div class="flex flex-col justify-center items-center col-span-2 md:col-span-1">
+          <img
+            src={imagenEnConstruccion.src}
+            alt="Viviendas en Construcción"
+            loading="lazy"
+            width="128px"
+            class=" object-fill rounded-md"
+          />
+          <Counter client:load end={802} />
+          <p class="text-xl md:text-2xl font-bold text-shark-800 pb-4">
+            Viviendas en Construcción
+          </p>
+        </div>
+        <div class="flex flex-col justify-center items-center col-span-2 md:col-span-1">
+          <img
+            src={imagenEntregadas.src}
+            alt="Vivientas Entregadas"
+            loading="lazy"
+            width="128px"
+            class=" object-fill rounded-md"
+          />
+          <Counter client:load end={866} />
+          <p class="text-xl md:text-2xl font-bold text-shark-800 pb-4">
+            Viviendas Entregadas
+          </p>
+        </div>
+      </div>
+    </div>
+  </Layout>
+
+  <style>
+    body {
+    font-family: 'Inter Variable', sans-serif;
+  }
+  </style>
+  

@@ -26,80 +26,84 @@ const {nameUbication, linkDirection, direction, city, refPhone, phone, textWhats
 ---
 
 <div class="flex flex-col w-full justify-center bg-shark-900 shadow-md rounded-md px-8 py-4">
-    <h2 class=" text-amber-400 text-3xl font-bold mb-2">
-      {nameUbication}
-    </h2>
-    <a
-      href={linkDirection}
-      class="text-shark-50 text-lg md:text-xl font-normal"
-      target="_blank"
-    >
-      {direction}
-    </a>
-    <p class="text-shark-300 text-base font-normal -mt-2 pb-2">{city}</p>
-    <div class="flex items-center pb-2">
-      <h3 class="text-shark-100 font-semibold text-base md:text-xl">
-        Teléfono:{" "}
-      </h3>
-      <a
-        href={refPhone}
-        class="text-shark-50 text-sm md:text-base font-normal pl-2"
-      >
-        {phone}
-      </a>
-    </div>
-    <div class="flex items-center pb-2">
-      <h3 class="text-shark-100 font-semibold text-base md:text-xl">
-        {textWhatsapp}
-      </h3>
-      <a
-        href={refWhatsApp}
-        class="text-shark-50 text-sm md:text-base font-normal pl-2"
-      >
-        {whatsapp}
-      </a>
-    </div>
-    <div class="flex items-center pb-4">
-      <h3 class="text-shark-100 font-semibold text-base md:text-xl">
-        {textEmail}
-      </h3>
-      <a
-        href={refEmail}
-        class="text-shark-50 text-sm md:text-base font-normal pl-2"
-      >
-        {email}
-      </a>
-    </div>
-    <div class="grid grid-cols-2 gap-4 my-4">
-      <a
-        class="flex flex-col justify-center items-center"
-        target="_blank"
-        href={wazeLink}
-      >
-        <p class="text-shark-300 text-base font-normal -mt-2 pb-2">
-          {textWaze}
-        </p>
-        <img
-          src={iconWaze}
-          alt="iconWaze"
-          class="w-12 h-12 mb-2 rounded-full"
-        />
-      </a>
-      <a
-        class="flex flex-col justify-center items-center"
-        target="_blank"
-        href={mapsLink}
-      >
-        <p class="text-shark-300 text-base font-normal -mt-2 pb-2">
-          {textMaps}
-        </p>
-        <img src={iconMaps} alt="iconMaps" class="w-12 h-12 mb-2" />
-      </a>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+      <div>
+        <h2 class=" text-amber-400 text-3xl font-bold mb-2">
+          {nameUbication}
+        </h2>
+        <a
+          href={linkDirection}
+          class="text-shark-50 text-lg md:text-xl font-normal"
+          target="_blank"
+        >
+          {direction}
+        </a>
+        <p class="text-shark-300 text-base font-normal -mt-2 pb-2">{city}</p>
+        <div class="flex items-center pb-2">
+          <h3 class="text-shark-100 font-semibold text-base md:text-xl">
+            Teléfono:{" "}
+          </h3>
+          <a
+            href={refPhone}
+            class="text-shark-50 text-sm md:text-base font-normal pl-2"
+          >
+            {phone}
+          </a>
+        </div>
+        <div class="flex items-center pb-2">
+          <h3 class="text-shark-100 font-semibold text-base md:text-xl">
+            {textWhatsapp}
+          </h3>
+          <a
+            href={refWhatsApp}
+            class="text-shark-50 text-sm md:text-base font-normal pl-2"
+          >
+            {whatsapp}
+          </a>
+        </div>
+        <div class="flex items-center pb-4">
+          <h3 class="text-shark-100 font-semibold text-base md:text-xl">
+            {textEmail}
+          </h3>
+          <a
+            href={refEmail}
+            class="text-shark-50 text-sm md:text-base font-normal pl-2"
+          >
+            {email}
+          </a>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 my-4">
+        <a
+          class="flex flex-col justify-center items-center"
+          target="_blank"
+          href={wazeLink}
+        >
+          <p class="text-shark-300 text-base font-normal -mt-2 pb-2">
+            {textWaze}
+          </p>
+          <img
+            src={iconWaze}
+            alt="iconWaze"
+            class="w-12 h-12 mb-2 rounded-full"
+          />
+        </a>
+        <a
+          class="flex flex-col justify-center items-center"
+          target="_blank"
+          href={mapsLink}
+        >
+          <p class="text-shark-300 text-base font-normal -mt-2 pb-2">
+            {textMaps}
+          </p>
+          <img src={iconMaps} alt="iconMaps" class="w-12 h-12 mb-2" />
+        </a>
+      </div>
     </div>
     <iframe
         src={iframe}
         title="Oficina Principal"
-        class="w-full h-full rounded-md"
+        class="w-full h-72 rounded-md"
         loading="lazy"
     />
     
